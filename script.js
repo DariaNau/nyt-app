@@ -12,6 +12,8 @@ var endYear = '2019';
 
 function request() {
 	searchTerm = array[0];
+	var numOfResults = array[1];
+	numOfResults.parseInt();
 
 	$.ajax({
 		url: 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + searchTerm + '&api-key=' + apikey,
@@ -22,5 +24,20 @@ function request() {
 		// array of articles returned from search
 		var articlesArray = response.response.docs;
 		console.log(articlesArray);
+
+		var titleArray = [];
+		var urlArray = [];
+
+		for (var i = 0; i < numOfResults - 1; i++) {
+			titleArray.push(articlesArray[i].headline.main);
+			urlArray.push(articlesArray[i].weburl);
+		}
+
+		var object = {
+			titles: titleArray,
+			urls: urlArray
+		};
+
+		appendAJAXres(object);
 	});
 }
