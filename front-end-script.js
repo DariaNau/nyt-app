@@ -11,8 +11,7 @@ var endYearInp = $("#endYear").val().trim();
 array = [searchInp, recNum, startYearInp, endYearInp];
 
 console.log(array);
-return (gussfunction);
-
+return (request());
 
 });
 
