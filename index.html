@@ -9,41 +9,54 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="" async defer></script>
 </head>
 
 <body>
 
     <header>
+        <!-- Jumbotron header -->
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-4">New Your Times API</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                </p>
+                <h1 class="display-4">New York Times API</h1>
             </div>
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlInput1">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
+        <!-- Search Parameters -->
+        <div class="container">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Search Term</label>
+                <input type="email" class="form-control" id="searchTerm" placeholder="Cage">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Number of Records</label>
+                <select class="form-control" id="FormControlOptions">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group">
 
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Start Year</label>
+                <textarea class="form-control" id="startYear" rows="1"></textarea>
+                <button class="justify-content-end">send</button>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">End Year</label>
+                <textarea class="form-control" id="endYear" rows="1"></textarea>
+                <button class="justify-content-end">send</button>
+            </div>
+            </form>
+
+            <!-- list group for top articles -->
+            <ul class="list-group">
+            </ul>
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        </form>
     </header>
 
 
